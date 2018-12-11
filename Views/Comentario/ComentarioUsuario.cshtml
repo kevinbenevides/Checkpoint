@@ -1,0 +1,113 @@
+@{
+    ViewBag.Title = "Comentários do Usuário";
+    Layout = "MasterPageLogado";
+}
+
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+<header>
+        <div class="background-topos">
+            <div class="logo">
+                <img class="none none2" src="img/logo.png" alt="#">
+            </div>
+            <div class="content-topo">
+                <div class="login none none2">
+                    <a href="Usuario/Login">Login</a>
+                </div>
+                <div class="login none none2">
+                    <a href="Usuario/Cadastrar">Cadastrar</a>
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:5000">
+                                <div class="link m-res">
+                                    Home
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sobre.html">
+                                <div class="link m-res">
+                                    Sobre Nós
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Comentario/ComentarioUsuario">
+                                <div class="link m-res">
+                                    Comentários
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contato.html">
+                                <div class="link">
+                                    Fale Conosco
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="duvidas.html">
+                                <div class="link">
+                                    Dúvidas Frequentes
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- fim content-topo -->
+        </div>
+        <!-- fim do background-topo -->
+    </header>
+
+    <main>
+        <div class="comentario">
+            <h1>Comentários</h1>
+            <form class="area-comentario"> 
+                <label>Escreva seu comentario sobre o CheckList:<br>
+                    <textarea name="texto" placeholder="Digite aqui..." required="true" maxlength="100" minlength="1">
+                    </textarea>
+                </label><br> 
+                <input class="botao" type="submit" value="Enviar">
+            </form>
+
+        </div>
+
+        <div class="comentarios">
+            <div class="caixa-comen">
+                <h3>(Nome) - Usuario </h3>
+                <p>Isto é um exemplo de comentario feito<br>
+                    para que possa servir como um substituto<br>
+                    temporário, enquanto o c# ainda não foi criado.
+                </p>
+            </div>
+
+            <div class="caixa-comen">
+                <h3>(Nome) - Usuario </h3>
+                <p>Isto é um exemplo de comentario feito<br>
+                    para que possa servir como um substituto<br>
+                    temporário, enquanto o c# ainda não foi criado.
+                </p>
+            </div>
+        </div>
+        <div class="comentarios">
+
+            <div class="caixa-comen">
+                <h3>(Nome) - Usuario </h3>
+                <p>Isto é um exemplo de comentario feito<br>
+                    para que possa servir como um substituto<br>
+                    temporário, enquanto o c# ainda não foi criado.
+                </p>
+            </div>
+
+            <div class="caixa-comen">
+                <h3>(Nome) - Usuario </h3>
+                <p>Isto é um exemplo de comentario feito<br>
+                    para que possa servir como um substituto<br>
+                    temporário, enquanto o c# ainda não foi criado.
+                </p>
+            </div>
+        </div>
+    </main>

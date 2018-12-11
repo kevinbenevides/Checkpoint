@@ -1,0 +1,21 @@
+<link href="/css/Main.css" rel="stylesheet" type="text/css"/>
+@{
+    ViewBag.Title = "Login";
+    Layout = "MasterPageDeslogado";
+}
+<div class="caixa">
+    <h1>Login</h1>
+        <form action="/Usuario/Login" method="POST">
+            <label  class="cor-amarelo" >
+                Email:<br>
+                <input type="text" name="email" required="true" placeholder="Insira seu email...">
+            </label><br><br>
+            <label>
+                Senha:<br>
+                <input type="password" name="senha" required="true" placeholder="Insira sua senha...">
+            </label><br><br>
+
+            <input class="botao" type="submit" value="Entrar">
+        </form>
+            <a class="links" href="/Usuario/Cadastrar">Cadastrar Usuário</a>
+</div>

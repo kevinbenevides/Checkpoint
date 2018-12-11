@@ -1,0 +1,90 @@
+/* Pagina de Cadastro */
+    
+.caixa-principal h1{
+    text-align: center;
+    color: #fff;
+    margin: 5%;
+    margin-top: 10%;
+    font-size: 3em;
+}
+
+.caixa-principal{
+    width: 100%;
+    background: #222;
+    color:#fff;
+    height: 100%;
+}
+
+.caixa{
+    /* border-radius: 30px;
+    border: 2px solid black; */
+    padding: 30px;
+    margin: 100px 38%;
+    outline: none;
+    height: auto;
+}
+
+.caixa input{
+    margin: 8px auto;
+    border: 1px black solid;
+    border-radius: 30px;
+    outline: none;
+    padding: 4px;
+    width: 80%;
+    height: 40px;
+}
+
+.caixa label{
+    font-size: 20pt;
+}
+
+.botao{
+    background-color: #1db0d4;
+}
+
+.links{
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 18%;
+}
+
+.cal{
+    margin-left: 24%;
+}
+
+.links:hover{
+    color: #bbb;
+}
+
+
+/* Fim da Pagina Cadastro */
+
+@media screen and (max-width:425px){
+/* responsividade da pagina de cadastro */
+
+.caixa{
+    margin: 1%;
+}
+}
+
+@media screen and (max-width:880px){
+
+    .caixa-principal h1{
+        margin-left: 0px;
+        margin-right: 66px;
+    }
+    
+    .caixa{
+        margin: 10%;
+        padding: 10%;
+    }
+    
+    .botao{
+        margin-left: 3%;
+    }
+    
+    .links{
+        margin-left: 29%;
+    }
+}

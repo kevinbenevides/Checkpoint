@@ -1,0 +1,119 @@
+@using Projeto.Checkpoint.Models;
+@using System;
+
+@{
+    ViewBag.Title = "Comentários do Usuário";
+    Layout = "MasterPageLogado";
+}
+
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+<header>
+        <div class="background-topos">
+            <div class="logo">
+                <img class="none none2" src="/img/logo.png" alt="#">
+            </div>
+            <div class="content-topo">
+                <div class="login none none2">
+                    <a href="/Usuario/Login">Login</a>
+                </div>
+                <div class="login none none2">
+                    <a href="/Usuario/Cadastrar">Cadastrar</a>
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li>
+                            <a href="http://localhost:5000">
+                                <div class="link m-res">
+                                    Home
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Usuario/Sobre">
+                                <div class="link m-res">
+                                    Sobre Nós
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Comentario/Comentar">
+                                <div class="link m-res">
+                                    Comentários
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Usuaori/Contato">
+                                <div class="link">
+                                    Fale Conosco
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Usuario/Duvidas">
+                                <div class="link">
+                                    Dúvidas Frequentes
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- fim content-topo -->
+        </div>
+        <!-- fim do background-topo -->
+    </header>
+    <main>
+
+        <section class="sessao-comentarios-admin">
+            <h2>Comentários</h2>
+            <div class="comentarios">
+                
+
+                @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>)
+                {
+                    <div class="caixa-comen">
+                        <h3>
+                            @item.Usuario.Nome 
+                        </h3>
+                        <p> 
+                            @item.Texto
+                        </p>
+                        <p>
+                            @item.DataCriacao.ToShortDateString()
+                        </p>
+                        <a href="/Comentario/Excluir?id=@item.Id">Excluir</a>
+                        <a href="/Comentario/Aprovar?id=@item.Id">Aprovar</a>
+                    </div>
+                }
+
+                
+            </div>
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <ul class="none none2">
+            <li>Sobre</li>
+            <li>Planos</li>
+            <li>Contato</li>
+        </ul>
+        <ul class="none none2">
+            <li>Dúvidas</li>
+            <li><a href="Usuario/Login">Login</a></li>
+            <li><a href="Usuario/Cadastrar">Cadastro</a></li>
+        </ul>
+        <div class="redes-sociais none none2 ">
+            <h3>Redes Sociais:</h3>
+            <a href="#">
+                <img src="/img/facebook.png" alt="#">
+            </a>
+            <a href="https://github.com/felipepoliveira" target="_blank">
+                <img id="git" src="/img/git.png" alt="#">
+            </a>
+            <a href="#">
+                <img src="/img/instagram.png" alt="#">
+            </a>
+        </div>
+    </footer>
